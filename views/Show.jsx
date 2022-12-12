@@ -6,7 +6,7 @@ class Show extends React.Component {
         const fruit = this.props.fruit;
         return (
             <div>
-                <h1 className="title">Show Route</h1>
+                <h1 className="title">See All The Pokemon!</h1>
                 <a href="/pokemon" className="backToHome">Back To Homepage</a>
             </div>
         )
