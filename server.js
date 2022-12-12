@@ -6,11 +6,8 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine())
 
 // Array to /fruits route
-app.get('/pokemon', (req, res) => {
-    // res.send(fruits)
-    res.render('Index', {
-        pokemon: pokemon
-    })
+app.get('/', (req, res) => {
+    res.send('Welcome to the Pokemon App!');
 });
 
 //Show route
