@@ -1,13 +1,15 @@
 import React from "react";
+import pokemon from "../models/pokemon";
 
 class Show extends React.Component {
     render () {
-        console.log(this.props.fruit);
-        const fruit = this.props.fruit;
+        const pokemon = this.props.pokemon
+        console.log(this.props.pokemon);
         return (
             <div>
-                <h1 className="title">See All The Pokemon!</h1>
-                <a href="/pokemon" className="backToHome">Back To Homepage</a>
+                <h1 className="title">Show Route</h1>
+                <p>{pokemon.name} is <img src={pokemon.img} alt={pokemon.name}></img></p>
+                <a href="/" className="backToHome">Back To Homepage</a>
             </div>
         )
     }
