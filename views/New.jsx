@@ -52,40 +52,47 @@ const htmlStyling = {
         listStyle: 'none',
         borderRadius: '4px',
         textAlign: 'center',
+        padding: '0px',
         textDecoration: 'none'
     };
 // ListItem Styling
     const listItemStyle = {
-        textalign: 'center',
+        textAlign: 'center',
         textDecoration: 'none'
     };
-    
-export default class Index extends Component {
+    const formStyling = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        alignContent: 'center',
+        gridGap: '5px',
+        marginBottom: '10px'
+      }
+
+export class New extends Component {
   render() {
-    const {Pokemon} = this.props;
-    console.log(Pokemon)
     return (
-    <html style={htmlStyling}>
-        <body style={bodyStyling}>
-        <nav style={navStyling}>
+      <div>
+        <html style={htmlStyling}>
+            <body style={bodyStyling}>
+            <nav style={navStyling}>
                 <ul style={listingStyle}>
-                    <li style={listItemStyle}><a href="/new" className="newButton"> Create New Pokemon</a></li>
+                    <li style={listItemStyle}><a href="/" className="newButton"> Go Back</a></li>
                 </ul>
             </nav>
-            <div style={myStyle}>
-                    <p className="title"><a href="/"><img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" alt="PokeDex Logo" /></a></p>
-                    <ul style={listingStyle}>
-                        {Pokemon.map((Pokemon) => {
-                        return (
-                            <li style={listItemStyle}>
-                                <a href={`/pokemon/${Pokemon.id}`}> {Pokemon.name}</a>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div>
-        </body>
-    </html>
+                <div style={myStyle} className="main-container">
+                    <h1 className="title">New Pokemon</h1>
+                    <form style={formStyling} action="/pokemon" method="post" autoComplete="off">
+                        Name: <input type="text" name="name" autoComplete="off"/> <br />
+                        Image: <input type="text" name="img" autoComplete="off"/><br />
+                        <input type="submit" name="" value="Add New Pokemon" />
+                    </form>
+                </div>
+            </body>
+        </html>
+      </div>
     )
   }
 }
+
+export default New;
