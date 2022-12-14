@@ -13,5 +13,5 @@ Download the source and install the required dependences:<br>
 <li>express-react-views</li>
 <li>mongoose</li>
 </ul>
-<br><br>
+<br>
 Run your local server using the <b>nodemon</b> command from your IDE CLI
