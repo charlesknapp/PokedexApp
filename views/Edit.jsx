@@ -56,53 +56,30 @@ const htmlStyling = {
     };
 // ListItem Styling
     const listItemStyle = {
-        textAlign: 'center',
-        textDecoration: 'none',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gridGap: '10px'
+        textalign: 'center',
+        textDecoration: 'none'
     };
-    const editor = {
-        fontFamily: 'Fantasy',
-        fontSize: '16px'
-    }
-    const inputStyling = {
-        backgroundColor: 'antiquewhite',
-        border: '0px',
-        borderRadius: '4px'
-    }
-    
-export default class Index extends Component {
+
+export default class Edit extends Component {
   render() {
-    const {Pokemon} = this.props;
-    console.log(Pokemon)
+    const { pokemon } = this.props;
+    console.log(this.props.Pokemon);
     return (
-    <html style={htmlStyling}>
+      <div>
         <body style={bodyStyling}>
         <nav style={navStyling}>
                 <ul style={listingStyle}>
-                    <li style={listItemStyle}><a href="/new" className="newButton"> Create New Pokemon</a></li>
+                    <li style={listItemStyle}><a href="/" className="newButton"> Go Back</a></li>
                 </ul>
             </nav>
-            <div style={myStyle}>
-                    <p className="title"><a href="/"><img src="https://i.ibb.co/wRQH3Gh/Pokedex-logo.png" alt="PokeDex Logo" /></a></p>
-                    <ul style={listingStyle}>
-                        {Pokemon.map((Pokemon) => {
-                        return (
-                            <li style={listItemStyle}>
-                                <a href={`/pokemon/${Pokemon.id}`}> {Pokemon.name}</a>
-                                <a style={editor} href={`/pokemon/${Pokemon.id}/edit`} className="editor">Edit {Pokemon.name}</a>
-                                <form action={`/pokemon/${Pokemon.id}?_method=DELETE`} method="POST">
-                                    <input style={inputStyling} type="submit" value="Remove Pokemon"/>
-                                </form>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div>
+        <h1 className="title">Edit Pokemon</h1>
+        <form action={`/pokemon/${pokemon._id}?_method=PUT`} method="POST">
+            Name: <input type="text" name="name" defaultValue={pokemon.name} /><br />
+            Image: <input type="text" name="img" defaultValue={pokemon.img} /><br />
+            <input type="submit" value="Submit Changes" />
+        </form>
         </body>
-    </html>
+      </div>
     )
   }
 }
