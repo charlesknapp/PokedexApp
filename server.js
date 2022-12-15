@@ -1,6 +1,4 @@
-//////////////////////////////////////
 // ENVIRONMENT INITIALIZATION INFO //
-////////////////////////////////////
 const PORT = 3000;
 require('dotenv').config();
 const mongoose = require('mongoose');
