@@ -5,7 +5,7 @@ This PokeDex application covers the main CRUD routes<br>
 (Create, Read, Update, Delete)
 <br>
 <br>
-<img src="https://i.gyazo.com/05abe9c0d9676ba84104396afc8857a4.png">
+<img src="https://i.gyazo.com/db36f5a86abd83016d93aca5cd7cea5d.png">
 <br>
 <h2>To Run</h2>
 Download the source and install the required dependences:<br>
