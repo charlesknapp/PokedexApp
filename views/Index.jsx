@@ -59,16 +59,18 @@ const htmlStyling = {
         textAlign: 'center',
         textDecoration: 'none',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         gridGap: '10px'
     };
     const editor = {
         fontFamily: 'Fantasy',
-        fontSize: '16px'
+        fontSize: '16px',
+        textDecoration: 'none',
+        color: 'Firebrick'
     }
     const inputStyling = {
-        backgroundColor: 'antiquewhite',
+        backgroundColor: '#fbc364',
         border: '0px',
         borderRadius: '4px'
     }

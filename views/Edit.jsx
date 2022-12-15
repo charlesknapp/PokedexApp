@@ -65,7 +65,9 @@ const listingStyle = {
   };
   const editor = {
       fontFamily: 'Fantasy',
-      fontSize: '16px'
+      fontSize: '16px',
+      textDecoration: 'none',
+      color: 'Firebrick'
   }
   const inputStyling = {
       backgroundColor: 'antiquewhite',
