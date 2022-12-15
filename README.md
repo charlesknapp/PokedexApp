@@ -2,6 +2,7 @@
 
 A simple directory application which has been themed for Pokemon.<br>
 This PokeDex application covers the main CRUD routes<br>
+<img src="https://i.gyazo.com/05abe9c0d9676ba84104396afc8857a4.png" width="600px">
 <br>
 <h2>To Run</h2>
 Download the source and install the required dependences:<br>
